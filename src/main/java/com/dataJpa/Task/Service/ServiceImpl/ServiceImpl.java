@@ -33,5 +33,24 @@ public class ServiceImpl implements UserService {
         return userRepository.save(user);
     }
 
+    @Override
+    public void deleteUsers() {
+        userRepository.deleteAll();
+
+    }
+
+
+    @Override
+    public User updateUser(User user) {
+        Long id=user.getId();
+        User userfinded = userRepository.findById(id).get();
+        userfinded.setName(user.getName());
+        userfinded.setPrice(user.getPrice());
+        userfinded.setCategory(user.getCategory());
+        userRepository.save(userfinded);
+
+        return userfinded;
+    }
+
 
 }

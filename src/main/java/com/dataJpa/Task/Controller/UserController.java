@@ -27,4 +27,16 @@ public class UserController {
         return ResponseEntity.ok().body(users);
     }
 
+    @DeleteMapping("delete")
+    public ResponseEntity<String> deleteUser(){
+        userService.deleteUsers();
+        return new ResponseEntity<>("deleted successfully:",HttpStatus.NO_CONTENT);
+    }
+
+    @PutMapping("update")
+    public ResponseEntity<User> userUpdate(@RequestBody User user){
+        User userupdated = userService.updateUser(user);
+        return ResponseEntity.ok().body(userupdated);
+    }
+
 }
