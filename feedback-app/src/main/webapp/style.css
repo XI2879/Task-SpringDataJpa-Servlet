@@ -1,8 +1,4 @@
-:root {
-    --primary : #7012;
-    --secondary : #40b0b;
-    --light: #7012;
-}
+
 * {
     position: relative;
     margin:0;
@@ -31,8 +27,8 @@ section {
 h1 {
     text-align: center;
     padding: 10px;
-    background: var(--light);
-    color: var(--secondary);
+    background: #7012;
+    color: #444b0b;
     font-size: 35px;
     font-weight: 900;
     margin: 0;
