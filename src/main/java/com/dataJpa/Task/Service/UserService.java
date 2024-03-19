@@ -1,13 +1,15 @@
 package com.dataJpa.Task.Service;
 
-import com.dataJpa.Task.Entity.User;
+import com.dataJpa.Task.Dto.UserDto;
 
 import java.util.List;
 
 public interface UserService {
-    List<User> getAllUsers();
-    User saveUser(User user);
+    List<UserDto> getAllUsers();
+    UserDto saveUser(UserDto userDto);
     void deleteUsers();
 
-    User updateUser(User user);
+    UserDto updateUser(UserDto userDto);
+
+    UserDto findById(Long id);
 }
